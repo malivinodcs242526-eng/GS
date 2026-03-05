@@ -20,10 +20,7 @@ if (!fs.existsSync('./uploads')) {
 // Middleware
 app.use(cors({
     origin: function (origin, callback) {
-        if (!origin) return callback(null, true);
-        if (origin.startsWith('http://localhost:')) return callback(null, true);
-        if (origin === process.env.FRONTEND_URL) return callback(null, true);
-        callback(null, false);
+        callback(null, true);
     },
     credentials: true,
 }));
