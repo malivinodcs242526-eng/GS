@@ -5,10 +5,10 @@ import { CommonModule } from '@angular/common';
 import { AuthService } from '../../services/auth.service';
 
 @Component({
-    selector: 'app-login',
-    standalone: true,
-    imports: [CommonModule, ReactiveFormsModule, RouterLink],
-    template: `
+  selector: 'app-login',
+  standalone: true,
+  imports: [CommonModule, ReactiveFormsModule, RouterLink],
+  template: `
     <div class="auth-wrapper">
       <div class="auth-left">
         <div class="hero-content">
@@ -33,16 +33,6 @@ import { AuthService } from '../../services/auth.service';
 
           <div class="alert-custom alert-danger" *ngIf="errorMsg">
             <i class="bi bi-exclamation-triangle"></i> {{ errorMsg }}
-          </div>
-
-          <div class="demo-creds">
-            <div class="demo-item" (click)="fillAdmin()">
-              <i class="bi bi-shield-check"></i>
-              <div>
-                <strong>Admin</strong>
-                <small>admin&#64;grocerystore.com</small>
-              </div>
-            </div>
           </div>
 
           <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
@@ -95,7 +85,7 @@ import { AuthService } from '../../services/auth.service';
       </div>
     </div>
   `,
-    styles: [`
+  styles: [`
     .auth-wrapper {
       display: flex;
       min-height: 100vh;
@@ -154,27 +144,6 @@ import { AuthService } from '../../services/auth.service';
       h2 { font-size: 1.8rem; color: #1a1a2e; margin-bottom: 8px; }
       .subtitle { color: #6c757d; margin-bottom: 24px; }
     }
-    .demo-creds {
-      background: #f0fdf4;
-      border: 1px solid #86efac;
-      border-radius: 10px;
-      padding: 12px;
-      margin-bottom: 20px;
-      .demo-item {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        cursor: pointer;
-        padding: 6px 8px;
-        border-radius: 6px;
-        transition: background 0.2s;
-        &:hover { background: #dcfce7; }
-        i { color: #16a34a; font-size: 1.2rem; }
-        div { display: flex; flex-direction: column; }
-        strong { font-size: 0.85rem; color: #166534; }
-        small { color: #16a34a; font-size: 0.75rem; }
-      }
-    }
     .form-group {
       margin-bottom: 16px;
       label { display: block; font-weight: 600; font-size: 0.9rem; color: #374151; margin-bottom: 6px; }
@@ -216,40 +185,36 @@ import { AuthService } from '../../services/auth.service';
   `],
 })
 export class LoginComponent {
-    loginForm: FormGroup;
-    loading = false;
-    submitted = false;
-    errorMsg = '';
-    showPassword = false;
+  loginForm: FormGroup;
+  loading = false;
+  submitted = false;
+  errorMsg = '';
+  showPassword = false;
 
-    constructor(private fb: FormBuilder, private auth: AuthService, private router: Router) {
-        this.loginForm = this.fb.group({
-            email: ['', [Validators.required, Validators.email]],
-            password: ['', [Validators.required]],
-        });
-    }
+  constructor(private fb: FormBuilder, private auth: AuthService, private router: Router) {
+    this.loginForm = this.fb.group({
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', [Validators.required]],
+    });
+  }
 
-    get f() { return this.loginForm.controls; }
+  get f() { return this.loginForm.controls; }
 
-    fillAdmin(): void {
-        this.loginForm.patchValue({ email: 'admin@grocerystore.com', password: 'Admin@123' });
-    }
+  onSubmit(): void {
+    this.submitted = true;
+    this.errorMsg = '';
+    if (this.loginForm.invalid) return;
 
-    onSubmit(): void {
-        this.submitted = true;
-        this.errorMsg = '';
-        if (this.loginForm.invalid) return;
-
-        this.loading = true;
-        this.auth.login(this.loginForm.value).subscribe({
-            next: (res) => {
-                if (res.user.role === 'admin') this.router.navigate(['/admin/dashboard']);
-                else this.router.navigate(['/customer/products']);
-            },
-            error: (err) => {
-                this.errorMsg = err.error?.message || 'Login failed. Please try again.';
-                this.loading = false;
-            },
-        });
-    }
+    this.loading = true;
+    this.auth.login(this.loginForm.value).subscribe({
+      next: (res) => {
+        if (res.user.role === 'admin') this.router.navigate(['/admin/dashboard']);
+        else this.router.navigate(['/customer/products']);
+      },
+      error: (err) => {
+        this.errorMsg = err.error?.message || 'Login failed. Please try again.';
+        this.loading = false;
+      },
+    });
+  }
 }
