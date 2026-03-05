@@ -1,0 +1,45 @@
+﻿npx : - Building...
+At line:1 char:1
++ npx ng build 
+--configuration=development 
+2>&1 | Out-File -FilePath "C 
+...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~
+    + CategoryInfo           
+   : NotSpecified: (- Build  
+  ing...:String) [], Remot   
+ eException
+    + FullyQualifiedErrorId  
+   : NativeCommandError
+ 
+
+Initial chunk files | Names                    |  Raw size
+chunk-XUGB3TK4.js   | -                        |   1.20 MB | 
+styles.css          | styles                   | 378.26 kB | 
+scripts.js          | scripts                  | 106.53 kB | 
+polyfills.js        | polyfills                |  88.09 kB | 
+main.js             | main                     |   4.40 kB | 
+
+                    | Initial total            |   1.76 MB
+
+Lazy chunk files    | Names                    |  Raw size
+chunk-CRP4YMU6.js   | -                        | 202.67 kB | 
+chunk-6EVD3PRH.js   | products-component       |  35.45 kB | 
+chunk-NPJZMPNV.js   | product-list-component   |  29.00 kB | 
+chunk-NKMMKJO6.js   | cart-component           |  26.60 kB | 
+chunk-VV5RHQKB.js   | orders-component         |  22.33 kB | 
+chunk-LU3BW4CY.js   | product-detail-component |  20.77 kB | 
+chunk-6FJXWSTM.js   | register-component       |  19.98 kB | 
+chunk-CJ56OWZM.js   | orders-component         |  17.59 kB | 
+chunk-7CYCFKXC.js   | dashboard-component      |  17.25 kB | 
+chunk-VGLHOAYD.js   | login-component          |  16.12 kB | 
+chunk-WQU445XW.js   | -                        |  12.07 kB | 
+chunk-XW3CJ2SL.js   | -                        |   1.56 kB | 
+chunk-DACSSLTR.js   | -                        |   1.45 kB | 
+chunk-U5QAHOGK.js   | -                        | 318 bytes | 
+
+Output location: C:\Users\as993\Downloads\GS\frontend\dist\frontend
+
+Application bundle generation complete. [6.134 seconds]
+

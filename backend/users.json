@@ -1,0 +1,22 @@
+[
+  {
+    "_id": "69a9be95ce0afdecafe7b83d",
+    "name": "Admin",
+    "email": "admin@grocerystore.com",
+    "password": "$2a$12$MIJWO5JxOvWJ7JewXFhzNeSDnArgx1QVOVTUMSg7syMiCMhB7tu5G",
+    "role": "admin",
+    "createdAt": "2026-03-05T17:34:13.460Z",
+    "updatedAt": "2026-03-05T17:34:13.460Z",
+    "__v": 0
+  },
+  {
+    "_id": "69a9bf6fb011e8098cb285e5",
+    "name": "A Test",
+    "email": "test@test.com",
+    "password": "$2a$12$KOC6h1kKUi9ewBnI7KcepuJCZCp5oFdwVwEpUJ9fBDA7uRIGsvsm6",
+    "role": "customer",
+    "createdAt": "2026-03-05T17:37:51.710Z",
+    "updatedAt": "2026-03-05T17:37:51.710Z",
+    "__v": 0
+  }
+]

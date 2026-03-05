@@ -1,0 +1,708 @@
+﻿npx : - Building...
+At line:1 char:1
++ npx ng build 
+--configuration=development 
+2>&1 | Out-File -FilePath "C 
+...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~
+    + CategoryInfo           
+   : NotSpecified: (- Build  
+  ing...:String) [], Remot   
+ eException
+    + FullyQualifiedErrorId  
+   : NativeCommandError
+ 
+
+Application bundle generation failed. [6.426 seconds]
+
+X [ERROR] NG5002: Parser 
+Error: Unexpected token . at 
+column 18 in [let s of 
+['All', ...statuses]] in C:/U
+sers/as993/Downloads/GS/front
+end/src/app/admin/orders/orde
+rs.component.ts@29:16 
+[plugin angular-compiler]
+
+    src/app/admin/orders/orde
+rs.component.ts:30:16:
+      30 Γöé         <button 
+*ngFor="let s of ['All', 
+...statuses]" class="filt...
+         Γò╡                 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~
+
+
+X [ERROR] NG5002: Parser 
+Error: Unexpected token . at 
+column 18 in [let s of 
+['All', ...statuses]] in C:/U
+sers/as993/Downloads/GS/front
+end/src/app/admin/orders/orde
+rs.component.ts@29:16 
+[plugin angular-compiler]
+
+    src/app/admin/orders/orde
+rs.component.ts:31:26:
+      31 Γöé           [class
+.active]="selectedStatus === 
+s"
+         Γò╡                 
+          
+~~~~~~~~~~~~~~~~~~~~
+
+
+X [ERROR] NG5002: Parser 
+Error: Unexpected token . at 
+column 18 in [let s of 
+['All', ...statuses]] in C:/U
+sers/as993/Downloads/GS/front
+end/src/app/admin/orders/orde
+rs.component.ts@29:16 
+[plugin angular-compiler]
+
+    src/app/admin/orders/orde
+rs.component.ts:32:19:
+      32 Γöé           
+(click)="filterOrders(s)">
+         Γò╡                 
+   ~~~~~~~~~~~~~~~
+
+
+X [ERROR] NG5: Argument of 
+type 'string | undefined' is 
+not assignable to parameter 
+of type 'string'.
+  Type 'undefined' is not 
+assignable to type 'string'. 
+[plugin angular-compiler]
+
+    src/app/admin/orders/orde
+rs.component.ts:32:32:
+      32 Γöé           
+(click)="filterOrders(s)">
+         Γò╡                 
+                ^
+
+
+X [ERROR] NG5002: Parser 
+Error: Unexpected token . at 
+column 18 in [let s of 
+['All', ...statuses]] in C:/U
+sers/as993/Downloads/GS/front
+end/src/app/admin/orders/orde
+rs.component.ts@29:16 
+[plugin angular-compiler]
+
+    src/app/admin/orders/orde
+rs.component.ts:33:10:
+      33 Γöé           {{ s 
+}}
+         Γò╡           
+~~~~~~~
+
+
+X [ERROR] NG5002: Parser 
+Error: Unexpected token . at 
+column 18 in [let s of 
+['All', ...statuses]] in C:/U
+sers/as993/Downloads/GS/front
+end/src/app/admin/orders/orde
+rs.component.ts@29:16 
+[plugin angular-compiler]
+
+    src/app/admin/orders/orde
+rs.component.ts:38:35:
+      38 Γöé 
+...class="spinner-wrapper" 
+*ngIf="loading"><div 
+class="spinner"></...
+         Γò╡                 
+           ~~~~~~~~~~~~~~~
+
+
+X [ERROR] NG5002: Parser 
+Error: Unexpected token . at 
+column 18 in [let s of 
+['All', ...statuses]] in C:/U
+sers/as993/Downloads/GS/front
+end/src/app/admin/orders/orde
+rs.component.ts@29:16 
+[plugin angular-compiler]
+
+    src/app/admin/orders/orde
+rs.component.ts:41:11:
+      41 Γöé       <div 
+*ngIf="!loading && 
+orders.length === 0" 
+class="empty-st...
+         Γò╡            ~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~
+
+
+X [ERROR] NG5002: Parser 
+Error: Unexpected token . at 
+column 18 in [let s of 
+['All', ...statuses]] in C:/U
+sers/as993/Downloads/GS/front
+end/src/app/admin/orders/orde
+rs.component.ts@29:16 
+[plugin angular-compiler]
+
+    src/app/admin/orders/orde
+rs.component.ts:48:42:
+      48 Γöé 
+...ss="orders-list 
+fade-in-up" *ngIf="!loading 
+&& orders.length > 0">
+         Γò╡                 
+               ~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~
+
+
+X [ERROR] NG5002: Parser 
+Error: Unexpected token . at 
+column 18 in [let s of 
+['All', ...statuses]] in C:/U
+sers/as993/Downloads/GS/front
+end/src/app/admin/orders/orde
+rs.component.ts@29:16 
+[plugin angular-compiler]
+
+    src/app/admin/orders/orde
+rs.component.ts:49:32:
+      49 Γöé         <div 
+class="order-card" 
+*ngFor="let order of orders">
+         Γò╡                 
+                
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+X [ERROR] NG5002: Parser 
+Error: Unexpected token . at 
+column 18 in [let s of 
+['All', ...statuses]] in C:/U
+sers/as993/Downloads/GS/front
+end/src/app/admin/orders/orde
+rs.component.ts@29:16 
+[plugin angular-compiler]
+
+    src/app/admin/orders/orde
+rs.component.ts:52:20:
+      52 Γöé               
+<code>#{{ order._id.slice(-8)
+.toUpperCase() }}</code>
+         Γò╡                 
+    ~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~
+
+
+X [ERROR] NG5002: Parser 
+Error: Unexpected token . at 
+column 18 in [let s of 
+['All', ...statuses]] in C:/U
+sers/as993/Downloads/GS/front
+end/src/app/admin/orders/orde
+rs.component.ts@29:16 
+[plugin angular-compiler]
+
+    src/app/admin/orders/orde
+rs.component.ts:53:39:
+      53 Γöé 
+...order-date">{{ 
+order.createdAt | date:'MMM 
+d, y, h:mm a' }}</span>
+         Γò╡                ~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~
+
+
+X [ERROR] NG5002: Parser 
+Error: Unexpected token . at 
+column 18 in [let s of 
+['All', ...statuses]] in C:/U
+sers/as993/Downloads/GS/front
+end/src/app/admin/orders/orde
+rs.component.ts@29:16 
+[plugin angular-compiler]
+
+    src/app/admin/orders/orde
+rs.component.ts:56:53:
+      56 Γöé 
+...="status-select" 
+[value]="order.status" 
+(change)="updateStatus(...
+         Γò╡                 
+             ~~~~~~~~~~~~
+
+
+X [ERROR] NG5002: Parser 
+Error: Unexpected token . at 
+column 18 in [let s of 
+['All', ...statuses]] in C:/U
+sers/as993/Downloads/GS/front
+end/src/app/admin/orders/orde
+rs.component.ts@29:16 
+[plugin angular-compiler]
+
+    src/app/admin/orders/orde
+rs.component.ts:56:77:
+      56 Γöé 
+...[value]="order.status" (ch
+ange)="updateStatus(order._id
+, $event)">
+         Γò╡                 
+                    ~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~
+
+
+X [ERROR] NG5002: Parser 
+Error: Unexpected token . at 
+column 18 in [let s of 
+['All', ...statuses]] in C:/U
+sers/as993/Downloads/GS/front
+end/src/app/admin/orders/orde
+rs.component.ts@29:16 
+[plugin angular-compiler]
+
+    src/app/admin/orders/orde
+rs.component.ts:57:24:
+      57 Γöé ...           
+<option *ngFor="let s of 
+statuses" [value]="s">{{ s 
+...
+         Γò╡                 
+      
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+X [ERROR] NG5002: Parser 
+Error: Unexpected token . at 
+column 18 in [let s of 
+['All', ...statuses]] in C:/U
+sers/as993/Downloads/GS/front
+end/src/app/admin/orders/orde
+rs.component.ts@29:16 
+[plugin angular-compiler]
+
+    src/app/admin/orders/orde
+rs.component.ts:57:60:
+      57 Γöé ...   <option 
+*ngFor="let s of statuses" 
+[value]="s">{{ s }}</option>
+         Γò╡                 
+                             
+     ^
+
+
+X [ERROR] NG5002: Parser 
+Error: Unexpected token . at 
+column 18 in [let s of 
+['All', ...statuses]] in C:/U
+sers/as993/Downloads/GS/front
+end/src/app/admin/orders/orde
+rs.component.ts@29:16 
+[plugin angular-compiler]
+
+    src/app/admin/orders/orde
+rs.component.ts:57:63:
+      57 Γöé ...   <option 
+*ngFor="let s of statuses" 
+[value]="s">{{ s }}</option>
+         Γò╡                 
+                             
+        ~~~~~~~
+
+
+X [ERROR] NG5002: Parser 
+Error: Unexpected token . at 
+column 18 in [let s of 
+['All', ...statuses]] in C:/U
+sers/as993/Downloads/GS/front
+end/src/app/admin/orders/orde
+rs.component.ts@29:16 
+[plugin angular-compiler]
+
+    src/app/admin/orders/orde
+rs.component.ts:64:43:
+      64 Γöé ...        <div 
+class="customer-avatar">{{ 
+getInitial(order) }}</div>
+         Γò╡                 
+                        
+~~~~~~~~~~~~~~~~~~~~~~~
+
+
+X [ERROR] NG5002: Parser 
+Error: Unexpected token . at 
+column 18 in [let s of 
+['All', ...statuses]] in C:/U
+sers/as993/Downloads/GS/front
+end/src/app/admin/orders/orde
+rs.component.ts@29:16 
+[plugin angular-compiler]
+
+    src/app/admin/orders/orde
+rs.component.ts:66:24:
+      66 Γöé                 
+<strong>{{ 
+getCustomerName(order) 
+}}</strong>
+         Γò╡                 
+        
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+X [ERROR] NG5002: Parser 
+Error: Unexpected token . at 
+column 18 in [let s of 
+['All', ...statuses]] in C:/U
+sers/as993/Downloads/GS/front
+end/src/app/admin/orders/orde
+rs.component.ts@29:16 
+[plugin angular-compiler]
+
+    src/app/admin/orders/orde
+rs.component.ts:67:23:
+      67 Γöé                 
+<small>{{ 
+getCustomerEmail(order) 
+}}</small>
+         Γò╡                 
+       
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+X [ERROR] NG5002: Parser 
+Error: Unexpected token . at 
+column 18 in [let s of 
+['All', ...statuses]] in C:/U
+sers/as993/Downloads/GS/front
+end/src/app/admin/orders/orde
+rs.component.ts@29:16 
+[plugin angular-compiler]
+
+    src/app/admin/orders/orde
+rs.component.ts:68:23:
+      68 Γöé ...         
+<small *ngIf="getCustomerPhon
+e(order)">{{ getCustomerP...
+         Γò╡                 
+   ~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~
+
+
+X [ERROR] NG5002: Parser 
+Error: Unexpected token . at 
+column 18 in [let s of 
+['All', ...statuses]] in C:/U
+sers/as993/Downloads/GS/front
+end/src/app/admin/orders/orde
+rs.component.ts@29:16 
+[plugin angular-compiler]
+
+    src/app/admin/orders/orde
+rs.component.ts:68:55:
+      68 Γöé ...If="getCustom
+erPhone(order)">{{ 
+getCustomerPhone(order) 
+}}</small>
+         Γò╡                 
+                
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+X [ERROR] NG5002: Parser 
+Error: Unexpected token . at 
+column 18 in [let s of 
+['All', ...statuses]] in C:/U
+sers/as993/Downloads/GS/front
+end/src/app/admin/orders/orde
+rs.component.ts@29:16 
+[plugin angular-compiler]
+
+    src/app/admin/orders/orde
+rs.component.ts:73:36:
+      73 Γöé ...        <div 
+class="item-row" *ngFor="let 
+item of order.products">
+         Γò╡                 
+                 ~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~
+
+
+X [ERROR] NG5002: Parser 
+Error: Unexpected token . at 
+column 18 in [let s of 
+['All', ...statuses]] in C:/U
+sers/as993/Downloads/GS/front
+end/src/app/admin/orders/orde
+rs.component.ts@29:16 
+[plugin angular-compiler]
+
+    src/app/admin/orders/orde
+rs.component.ts:74:28:
+      74 Γöé ...            
+<img [src]="item.image || 
+''" class="item-img" [alt...
+         Γò╡                 
+           ~~~~~~~~~~~~~~~~
+
+
+X [ERROR] NG5002: Parser 
+Error: Unexpected token . at 
+column 18 in [let s of 
+['All', ...statuses]] in C:/U
+sers/as993/Downloads/GS/front
+end/src/app/admin/orders/orde
+rs.component.ts@29:16 
+[plugin angular-compiler]
+
+    src/app/admin/orders/orde
+rs.component.ts:74:70:
+      74 Γöé ...'" 
+class="item-img" 
+[alt]="item.name" 
+(error)="onImgError($even...
+         Γò╡                 
+              ~~~~~~~~~
+
+
+X [ERROR] NG5002: Parser 
+Error: Unexpected token . at 
+column 18 in [let s of 
+['All', ...statuses]] in C:/U
+sers/as993/Downloads/GS/front
+end/src/app/admin/orders/orde
+rs.component.ts@29:16 
+[plugin angular-compiler]
+
+    src/app/admin/orders/orde
+rs.component.ts:74:90:
+      74 Γöé 
+...class="item-img" 
+[alt]="item.name" 
+(error)="onImgError($event)" 
+/>
+         Γò╡                 
+                             
+  ~~~~~~~~~~~~~~~~~~
+
+
+X [ERROR] NG5002: Parser 
+Error: Unexpected token . at 
+column 18 in [let s of 
+['All', ...statuses]] in C:/U
+sers/as993/Downloads/GS/front
+end/src/app/admin/orders/orde
+rs.component.ts@29:16 
+[plugin angular-compiler]
+
+    src/app/admin/orders/orde
+rs.component.ts:76:42:
+      76 Γöé                 
+  <span class="item-name">{{ 
+item.name }}</span>
+         Γò╡                 
+                          
+~~~~~~~~~~~~~~~
+
+
+X [ERROR] NG5002: Parser 
+Error: Unexpected token . at 
+column 18 in [let s of 
+['All', ...statuses]] in C:/U
+sers/as993/Downloads/GS/front
+end/src/app/admin/orders/orde
+rs.component.ts@29:16 
+[plugin angular-compiler]
+
+    src/app/admin/orders/orde
+rs.component.ts:77:41:
+      77 Γöé ...            
+<span class="item-qty">Qty: 
+{{ item.quantity }}</span>
+         Γò╡                 
+                      
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+X [ERROR] NG5002: Parser 
+Error: Unexpected token . at 
+column 18 in [let s of 
+['All', ...statuses]] in C:/U
+sers/as993/Downloads/GS/front
+end/src/app/admin/orders/orde
+rs.component.ts@29:16 
+[plugin angular-compiler]
+
+    src/app/admin/orders/orde
+rs.component.ts:79:41:
+      79 Γöé ...em-price">Rs 
+{{ (item.price * 
+item.quantity) | 
+number:'1.0-0' }...
+         Γò╡              ~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~
+
+
+X [ERROR] NG5002: Parser 
+Error: Unexpected token . at 
+column 18 in [let s of 
+['All', ...statuses]] in C:/U
+sers/as993/Downloads/GS/front
+end/src/app/admin/orders/orde
+rs.component.ts@29:16 
+[plugin angular-compiler]
+
+    src/app/admin/orders/orde
+rs.component.ts:86:22:
+      86 Γöé                 
+<span>{{ 
+order.shippingAddress 
+}}</span>
+         Γò╡                 
+      
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+X [ERROR] NG5002: Parser 
+Error: Unexpected token . at 
+column 18 in [let s of 
+['All', ...statuses]] in C:/U
+sers/as993/Downloads/GS/front
+end/src/app/admin/orders/orde
+rs.component.ts@29:16 
+[plugin angular-compiler]
+
+    src/app/admin/orders/orde
+rs.component.ts:90:24:
+      90 Γöé ...       
+<strong>Rs {{ 
+order.totalPrice | 
+number:'1.0-0' }}</strong>
+         Γò╡                 
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~
+
+
+X [ERROR] NG5002: Parser 
+Error: Unexpected token . at 
+column 18 in [let s of 
+['All', ...statuses]] in C:/U
+sers/as993/Downloads/GS/front
+end/src/app/admin/orders/orde
+rs.component.ts@29:16 
+[plugin angular-compiler]
+
+    src/app/admin/orders/orde
+rs.component.ts:98:30:
+      98 Γöé       <div 
+class="pagination" 
+*ngIf="totalPages > 1">
+         Γò╡                 
+              
+~~~~~~~~~~~~~~~~~~~~~~
+
+
+X [ERROR] NG5002: Parser 
+Error: Unexpected token . at 
+column 18 in [let s of 
+['All', ...statuses]] in C:/U
+sers/as993/Downloads/GS/front
+end/src/app/admin/orders/orde
+rs.component.ts@29:16 
+[plugin angular-compiler]
+
+    src/app/admin/orders/orde
+rs.component.ts:99:28:
+      99 Γöé ...   <button 
+[disabled]="currentPage === 
+1" (click)="changePage(c...
+         Γò╡                 
+          ~~~~~~~~~~~~~~~~~
+
+
+X [ERROR] NG5002: Parser 
+Error: Unexpected token . at 
+column 18 in [let s of 
+['All', ...statuses]] in C:/U
+sers/as993/Downloads/GS/front
+end/src/app/admin/orders/orde
+rs.component.ts@29:16 
+[plugin angular-compiler]
+
+    src/app/admin/orders/orde
+rs.component.ts:99:56:
+      99 Γöé 
+...sabled]="currentPage === 
+1" (click)="changePage(curren
+tPage - 1)">
+         Γò╡                 
+                        
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+X [ERROR] NG5002: Parser 
+Error: Unexpected token . at 
+column 18 in [let s of 
+['All', ...statuses]] in C:/U
+sers/as993/Downloads/GS/front
+end/src/app/admin/orders/orde
+rs.component.ts@29:16 
+[plugin angular-compiler]
+
+    src/app/admin/orders/orde
+rs.component.ts:102:14:
+      102 Γöé         
+<span>Page {{ currentPage }} 
+of {{ totalPages }}</span>
+          Γò╡               ~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~
+
+
+X [ERROR] NG5002: Parser 
+Error: Unexpected token . at 
+column 18 in [let s of 
+['All', ...statuses]] in C:/U
+sers/as993/Downloads/GS/front
+end/src/app/admin/orders/orde
+rs.component.ts@29:16 
+[plugin angular-compiler]
+
+    src/app/admin/orders/orde
+rs.component.ts:103:28:
+      103 Γöé ...utton 
+[disabled]="currentPage === 
+totalPages" 
+(click)="changeP...
+          Γò╡                
+      
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+X [ERROR] NG5002: Parser 
+Error: Unexpected token . at 
+column 18 in [let s of 
+['All', ...statuses]] in C:/U
+sers/as993/Downloads/GS/front
+end/src/app/admin/orders/orde
+rs.component.ts@29:16 
+[plugin angular-compiler]
+
+    src/app/admin/orders/orde
+rs.component.ts:103:65:
+      103 Γöé ...urrentPage 
+=== totalPages" (click)="chan
+gePage(currentPage + 1)">
+          Γò╡                
+                        
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
