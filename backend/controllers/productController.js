@@ -73,9 +73,7 @@ const createProduct = async (req, res) => {
     try {
         const { name, category, price, stock, description } = req.body;
 
-        const imageUrl = req.file
-            ? `${req.protocol}://${req.get('host')}/uploads/${req.file.filename}`
-            : '';
+        const imageUrl = req.file ? req.file.path : '';
 
         const product = await Product.create({
             name,
@@ -110,7 +108,7 @@ const updateProduct = async (req, res) => {
         };
 
         if (req.file) {
-            updateData.image = `${req.protocol}://${req.get('host')}/uploads/${req.file.filename}`;
+            updateData.image = req.file.path;
         }
 
         const product = await Product.findByIdAndUpdate(req.params.id, updateData, {
