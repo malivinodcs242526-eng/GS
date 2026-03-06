@@ -212,7 +212,11 @@ export class LoginComponent {
         else this.router.navigate(['/customer/products']);
       },
       error: (err) => {
-        this.errorMsg = err.error?.message || 'Login failed. Please try again.';
+        if (err.status === 0) {
+          this.errorMsg = 'Network Error: Could not reach the backend. If testing on mobile, ensure your PC firewall allows port 5000.';
+        } else {
+          this.errorMsg = err.error?.message || 'Login failed. Please try again.';
+        }
         this.loading = false;
       },
     });

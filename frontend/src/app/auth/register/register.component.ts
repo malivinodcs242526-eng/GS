@@ -5,10 +5,10 @@ import { CommonModule } from '@angular/common';
 import { AuthService } from '../../services/auth.service';
 
 @Component({
-    selector: 'app-register',
-    standalone: true,
-    imports: [CommonModule, ReactiveFormsModule, RouterLink],
-    template: `
+  selector: 'app-register',
+  standalone: true,
+  imports: [CommonModule, ReactiveFormsModule, RouterLink],
+  template: `
     <div class="auth-wrapper">
       <div class="auth-left">
         <div class="hero-content">
@@ -125,7 +125,7 @@ import { AuthService } from '../../services/auth.service';
       </div>
     </div>
   `,
-    styles: [`
+  styles: [`
     .auth-wrapper { display: flex; min-height: 100vh; }
     .auth-left { flex: 1; background: linear-gradient(135deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%); display: flex; align-items: center; justify-content: center; padding: 48px; }
     .hero-content { color: white; max-width: 400px; }
@@ -151,51 +151,55 @@ import { AuthService } from '../../services/auth.service';
   `],
 })
 export class RegisterComponent {
-    registerForm: FormGroup;
-    loading = false;
-    submitted = false;
-    errorMsg = '';
-    successMsg = '';
-    showPassword = false;
+  registerForm: FormGroup;
+  loading = false;
+  submitted = false;
+  errorMsg = '';
+  successMsg = '';
+  showPassword = false;
 
-    constructor(private fb: FormBuilder, private auth: AuthService, private router: Router) {
-        this.registerForm = this.fb.group(
-            {
-                name: ['', [Validators.required, Validators.minLength(2)]],
-                email: ['', [Validators.required, Validators.email]],
-                password: ['', [Validators.required, Validators.minLength(6)]],
-                confirmPassword: ['', Validators.required],
-                phone: [''],
-                address: [''],
-            },
-            { validators: this.passwordMatch }
-        );
-    }
+  constructor(private fb: FormBuilder, private auth: AuthService, private router: Router) {
+    this.registerForm = this.fb.group(
+      {
+        name: ['', [Validators.required, Validators.minLength(2)]],
+        email: ['', [Validators.required, Validators.email]],
+        password: ['', [Validators.required, Validators.minLength(6)]],
+        confirmPassword: ['', Validators.required],
+        phone: [''],
+        address: [''],
+      },
+      { validators: this.passwordMatch }
+    );
+  }
 
-    get f() { return this.registerForm.controls; }
+  get f() { return this.registerForm.controls; }
 
-    passwordMatch(group: FormGroup) {
-        const pass = group.get('password')?.value;
-        const confirm = group.get('confirmPassword')?.value;
-        return pass === confirm ? null : { mismatch: true };
-    }
+  passwordMatch(group: FormGroup) {
+    const pass = group.get('password')?.value;
+    const confirm = group.get('confirmPassword')?.value;
+    return pass === confirm ? null : { mismatch: true };
+  }
 
-    onSubmit(): void {
-        this.submitted = true;
-        this.errorMsg = '';
-        if (this.registerForm.invalid) return;
+  onSubmit(): void {
+    this.submitted = true;
+    this.errorMsg = '';
+    if (this.registerForm.invalid) return;
 
-        this.loading = true;
-        const { confirmPassword, ...data } = this.registerForm.value;
+    this.loading = true;
+    const { confirmPassword, ...data } = this.registerForm.value;
 
-        this.auth.register(data).subscribe({
-            next: () => {
-                this.router.navigate(['/customer/products']);
-            },
-            error: (err) => {
-                this.errorMsg = err.error?.message || 'Registration failed.';
-                this.loading = false;
-            },
-        });
-    }
+    this.auth.register(data).subscribe({
+      next: () => {
+        this.router.navigate(['/customer/products']);
+      },
+      error: (err) => {
+        if (err.status === 0) {
+          this.errorMsg = 'Network Error: Could not reach the backend. If testing on mobile, ensure your PC firewall allows port 5000.';
+        } else {
+          this.errorMsg = err.error?.message || 'Registration failed.';
+        }
+        this.loading = false;
+      },
+    });
+  }
 }
